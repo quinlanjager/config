@@ -19,6 +19,9 @@ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.con
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodjs
+# add ripgrep
+
+brew install ripgrep
 
 # Add vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
