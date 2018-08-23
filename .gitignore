@@ -1,1 +1,4 @@
 *.swp
+tags
+tags.*
+newrelic_*
