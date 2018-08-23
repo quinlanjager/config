@@ -19,8 +19,11 @@ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.con
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodjs
-# add ripgrep
 
+# Add universal ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+
+# add ripgrep
 brew install ripgrep
 
 # Add vim-plug
