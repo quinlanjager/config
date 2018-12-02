@@ -71,6 +71,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
@@ -113,6 +114,7 @@ colorscheme NeoSolarized
 " autoformat
 autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.css Neoformat
+autocmd BufWritePre *.ex* Neoformat
 
 
 " Enable hot reloading
