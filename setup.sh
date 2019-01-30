@@ -25,10 +25,7 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs
 
-sudo apt-get install yarn
-
-yarn add global diff-so-fancy
-
+npm install -g diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 # Add vim-plug
