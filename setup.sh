@@ -1,5 +1,7 @@
 brew install fish
 brew install git
+# add fzf
+brew install fzf
 
 # link config files
 ln ./vimrc ~/.vimrc
@@ -30,5 +32,6 @@ brew install ripgrep
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c "PlugInstall"
+
 
 
