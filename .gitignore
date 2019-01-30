@@ -2,3 +2,9 @@
 tags
 tags.*
 newrelic_*
+Dockerfile
+.dockerignore
+docker-compose.yml
+dbdata
+.nodemonignore
+node_modules
