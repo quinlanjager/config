@@ -1,7 +1,7 @@
 set background=dark
 " Line number
 syntax on
-set termguicolors
+" set termguicolors
 " set relative numbers, with current line being absolute
 set relativenumber number
 
@@ -16,7 +16,7 @@ augroup END
 set hlsearch
 " clear search highlighting
 nnoremap <silent> <esc> :noh<cr><esc>
-
+"
 " Don't wrap lines
 set nowrap
 " enable mouse behaviour
@@ -58,20 +58,22 @@ Plug 'greghensley/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
-Plug 'kien/ctrlp.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'iCyMind/NeoSolarized'
 Plug 'othree/html5.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'https://github.com/ervandew/supertab'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
+Plug 'danro/rename.vim'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
@@ -109,13 +111,16 @@ if executable('rg')
   " rg is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-colorscheme NeoSolarized
 
 " autoformat
-autocmd BufWritePre *.js Neoformat
+" autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.ex* Neoformat
 
+" fzf settings
+nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <silent> <C-Bslash> :Files<CR>
 
+colorscheme NeoSolarized
 " Enable hot reloading
 set backupcopy=yes

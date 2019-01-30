@@ -4,6 +4,7 @@ alias nvimrc='nvim ~/.config/nvim/init.vim'
 alias mvim='/Applications/MacVim.app/Contents/bin/mvim'
 alias vimr='/Applications/VimR.app/Contents/MacOS/VimR'
 alias nv='nvim'
+alias nve='nvim (fzf)'
 alias g='git'
 alias gst='git status'
 alias fishconf='nvim ~/.config/fish/config.fish'
@@ -14,6 +15,9 @@ alias gpl='git pull'
 alias gco='git checkout'
 alias gbr='git branch'
 alias gst='git status'
+alias copyconf='cp ~/.config/nvim/init.vim ~/.config/fish/config.fish ~/my_config'
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
+set -Ux FZF_DEFAULT_COMMAND "rg --files"
+
