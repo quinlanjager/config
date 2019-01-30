@@ -1,7 +1,10 @@
+sudo apt-get update
+
 brew install fish
 brew install git
-# add fzf
 brew install fzf
+brew install ripgrep
+brew install bat
 
 # link config files
 ln ./vimrc ~/.vimrc
@@ -9,8 +12,8 @@ ln ./config.fish ~/.config/fish/config.fish
 
 # Install omf and get the theme!
 curl -L https://get.oh-my.fish | fish
-omf install nai
-omf theme nai
+omf install l
+omf theme l
 
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.1
@@ -20,18 +23,19 @@ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.con
 # Add nodejs plugin
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodjs
+asdf install nodejs
 
-# Add universal ctags
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+sudo apt-get install yarn
 
-# add ripgrep
-brew install ripgrep
+yarn add global diff-so-fancy
+
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 # Add vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c "PlugInstall"
+
 
 
 
