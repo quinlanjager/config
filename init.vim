@@ -113,7 +113,7 @@ if executable('rg')
 endif
 
 " autoformat
-" autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.ex* Neoformat
 

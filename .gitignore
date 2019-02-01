@@ -4,7 +4,7 @@ tags.*
 newrelic_*
 Dockerfile
 .dockerignore
-docker-compose.yml
+q-docker-compose.yml
 dbdata
 .nodemonignore
 node_modules

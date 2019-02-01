@@ -5,6 +5,7 @@ brew install git
 brew install fzf
 brew install ripgrep
 brew install bat
+brew install direnv
 
 # link config files
 ln ./vimrc ~/.vimrc

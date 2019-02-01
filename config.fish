@@ -16,8 +16,10 @@ alias gco='git checkout'
 alias gbr='git branch'
 alias gst='git status'
 alias copyconf='cp ~/.config/nvim/init.vim ~/.config/fish/config.fish ~/my_config'
+alias q-docker-compose 'docker-compose -f q-docker-compose.yml'
+alias lld 'll -d */'
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 set -Ux FZF_DEFAULT_COMMAND "rg --files"
-
+eval (direnv hook fish)
