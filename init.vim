@@ -27,7 +27,7 @@ set smartindent
 
 " copy the file name write away
 command CopyFilename let @+ = expand("%")
-
+"
 " Directory tree (netrw) settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -112,19 +112,8 @@ let g:ale_echo_msg_format = '%linter% says %s'
 " Map keys to navigate between lines with errors and warnings.
 nnoremap <leader>an :ALENextWrap<cr>
 nnoremap <leader>ap :ALEPreviousWrap<cr>
-if executable('rg')
-  " Use ripgrep over Grep
-  set grepprg=rg\ --vimgrep\ --no-heading
-  set grepformat=%f:%l:%c:%m,%f:%l%m
-
-  " Use rg in CtrlP for listing files. Lightning fast and respects .gitignore
-  " let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-
-  " rg is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
+highlight link ALEError ErrorMsg
+"
 " autoformat
 autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.css Neoformat
