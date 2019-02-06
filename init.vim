@@ -37,6 +37,18 @@ let g:netrw_winsize = 25
 
 " Search for highlighted visually selected text
 vnoremap // y/<C-R>"<CR>
+" keep selections when indenting in visual mode
+vnoremap > >gv
+vnoremap < <gv
+" Map arrow keys
+nmap <Up> [e
+nmap <Down> ]e
+nmap <Left> <<
+nmap <Right> >>
+vmap <Up> [egv
+vmap <Down> ]egv
+vmap <Left> <gv
+vmap <Right> >gv
 
 "Open up NERDtree easy
 map <C-n> :NERDTreeToggle<CR>
@@ -72,6 +84,7 @@ Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'danro/rename.vim'
 call plug#end()
