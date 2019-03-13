@@ -19,7 +19,7 @@ nnoremap <silent> <esc> :noh<cr><esc>
 "
 " Don't wrap lines
 set nowrap
-" enable mouse behaviour
+" mouse interactions
 set mouse=a
 " Tab settings
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
@@ -49,6 +49,10 @@ vmap <Up> [egv
 vmap <Down> ]egv
 vmap <Left> <gv
 vmap <Right> >gv
+imap <Up> <nop>
+imap <Down> <nop>
+imap <Left> <nop>
+imap <Right> <nop>
 
 "Open up NERDtree easy
 map <C-n> :NERDTreeToggle<CR>
@@ -59,12 +63,10 @@ map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-l> <C-W>l
 
-" Airline config
-let g:airline_theme='minimalist'
-let g:airline#extensions#ale#enabled = 1
-
 " vim-plugs
 call plug#begin('~/.vim/plugged')
+Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'tpope/vim-commentary'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'greghensley/vim-gutentags'
 Plug 'mileszs/ack.vim'
@@ -87,6 +89,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'danro/rename.vim'
+Plug 'NLKNguyen/papercolor-theme',
+Plug 'rakr/vim-two-firewatch',
+Plug 'Raimondi/delimitMate',
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
@@ -112,17 +118,22 @@ let g:ale_echo_msg_format = '%linter% says %s'
 " Map keys to navigate between lines with errors and warnings.
 nnoremap <leader>an :ALENextWrap<cr>
 nnoremap <leader>ap :ALEPreviousWrap<cr>
-highlight link ALEError ErrorMsg
+" Only need this for solarized/dracula?
+ highlight link ALEError ErrorMsg
+ highlight link ALEWarning Search
 "
 " autoformat
-autocmd BufWritePre *.js Neoformat
+" autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.ex* Neoformat
 
-" fzf settings
-nnoremap <silent> <C-p> :GFiles<CR>
-nnoremap <silent> <C-Bslash> :Files<CR>
+colors dim
 
-colorscheme NeoSolarized
+" fzf settings
+nnoremap <silent> <C-p> :Files<CR>
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 " Enable hot reloading
 set backupcopy=yes

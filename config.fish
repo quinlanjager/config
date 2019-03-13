@@ -16,8 +16,8 @@ alias gco='git checkout'
 alias gbr='git branch'
 alias gst='git status'
 alias copyconf='cp ~/.config/nvim/init.vim ~/.config/fish/config.fish ~/my_config'
-alias q-docker-compose 'docker-compose -f q-docker-compose.yml'
 alias lld 'll -d */'
+alias dsf='diff $argv | diff-so-fancy --colors'
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
