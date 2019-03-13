@@ -92,7 +92,8 @@ Plug 'danro/rename.vim'
 Plug 'NLKNguyen/papercolor-theme',
 Plug 'rakr/vim-two-firewatch',
 Plug 'Raimondi/delimitMate',
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive',
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
