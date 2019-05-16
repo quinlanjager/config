@@ -1,9 +1,9 @@
 set background=dark
 " Line number
 syntax on
-" set termguicolors
 " set relative numbers, with current line being absolute
 set relativenumber number
+" set termguicolors
 
 " toggles line numbers from relative to absolute depending on mode
 augroup numbertoggle
@@ -64,7 +64,7 @@ map <C-H> <C-W>h
 map <C-l> <C-W>l
 
 " vim-plugs
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'tpope/vim-commentary'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -77,7 +77,6 @@ Plug 'iCyMind/NeoSolarized'
 Plug 'othree/html5.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'https://github.com/ervandew/supertab'
-Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
@@ -86,14 +85,19 @@ Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/goyo.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'danro/rename.vim'
-Plug 'NLKNguyen/papercolor-theme',
-Plug 'rakr/vim-two-firewatch',
-Plug 'Raimondi/delimitMate',
-Plug 'tpope/vim-fugitive',
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'rakr/vim-two-firewatch'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'nightsense/snow'
+Plug 'rhysd/vim-color-spring-night', {'as': 'spring-night'}
+Plug 'morhetz/gruvbox'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
@@ -128,13 +132,19 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.ex* Neoformat
 
-colors dim
-
+colors NeoSolarized 
 " fzf settings
 nnoremap <silent> <C-p> :Files<CR>
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
       \ }
 " Enable hot reloading
 set backupcopy=yes
