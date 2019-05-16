@@ -64,14 +64,13 @@ map <C-H> <C-W>h
 map <C-l> <C-W>l
 
 " vim-plugs
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'tpope/vim-commentary'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'greghensley/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'iCyMind/NeoSolarized'
 Plug 'othree/html5.vim'
@@ -132,10 +131,10 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.ex* Neoformat
 
-colors NeoSolarized 
+colorscheme GruvBox 
 " fzf settings
 nnoremap <silent> <C-p> :Files<CR>
-
+let g:gruvbox_bold = '0'
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
