@@ -97,6 +97,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'nightsense/snow'
 Plug 'rhysd/vim-color-spring-night', {'as': 'spring-night'}
 Plug 'morhetz/gruvbox'
+Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 " Neoformat settings
 " vim-javascript settings
@@ -108,8 +109,10 @@ let g:jsx_ext_required = 0
 " Asynchronous Lint Engine (ALE)
 " Limit linters used for JavaScript.
 let g:ale_linters = {
-\  'javascript': ['flow', 'eslint'] 
+\  'javascript': ['flow', 'eslint'],
+\  'elixir': ['credo', 'dogma', 'elixir-ls', 'dialyxir', 'mix']
 \}
+let g:ale_elixir_elixir_ls_release = "~/elixr-ls"
 
 " highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
 " highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
@@ -145,5 +148,6 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
 " Enable hot reloading
 set backupcopy=yes

@@ -11,7 +11,7 @@ abbr gst='git status'
 abbr fishconf='mvim ~/.config/fish/config.fish'
 abbr gp='git push'
 abbr ga='git add'
-abbr gc='git commit -v' 
+abbr gc='git commit -v'
 abbr gpl='git pull'
 abbr gco='git checkout'
 abbr gbr='git branch'
@@ -24,4 +24,5 @@ source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 source ~/.asdf/asdf.fish
 set -Ux FZF_DEFAULT_COMMAND "rg --files"
+set -gx ERL_AFLAGS "-kernel shell_history enabled"
 eval (direnv hook fish)

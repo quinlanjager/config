@@ -8,3 +8,4 @@ q-docker-compose.yml
 dbdata
 .nodemonignore
 node_modules
+.elixir_ls/
