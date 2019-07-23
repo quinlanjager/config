@@ -2,7 +2,6 @@
 tags
 tags.*
 newrelic_*
-Dockerfile
 .dockerignore
 q-docker-compose.yml
 dbdata
