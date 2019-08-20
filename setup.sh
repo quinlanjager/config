@@ -6,6 +6,7 @@ brew install fzf
 brew install ripgrep
 brew install bat
 brew install direnv
+brew install asdf
 
 # link config files
 ln ./vimrc ~/.vimrc
@@ -16,8 +17,7 @@ curl -L https://get.oh-my.fish | fish
 omf install l
 omf theme l
 
-# Install asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.1
+# Add asdf to fish config
 echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
 mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
@@ -33,7 +33,6 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c "PlugInstall"
-
 
 
 
