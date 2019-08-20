@@ -1,3 +1,3 @@
 ## Styling
-- [Gohu Font](http://font.gohu.org/)
+- [Fira Code](https://github.com/tonsky/FiraCode)
 - [GruvBox theme](https://github.com/morhetz/gruvbox)
